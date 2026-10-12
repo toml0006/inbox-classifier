@@ -1,0 +1,6 @@
+__pycache__/
+.DS_Store
+*.skill
+# triage working files hold real mail
+inbox*.json
+classified*.json

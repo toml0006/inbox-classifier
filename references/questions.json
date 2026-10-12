@@ -1,0 +1,40 @@
+{
+  "category": {
+    "type": "choice",
+    "instructions": "What kind of email is this, from the point of view of the recipient, a working professional who also gets family and household mail?",
+    "criteria": {
+      "action_required": "A person waits on this recipient for a reply, a decision, a signature, a payment or a file. Includes client mail, invoices addressed to them, and support replies that ask them for information.",
+      "waiting_on_other": "The recipient already did their part and the other side owes the next step. Nothing for them to do now, but they want to see it.",
+      "school": "From a school, district, teacher, principal, school activity, school photographer or a school records system. Anything about the recipient's children's schooling.",
+      "receipt_or_ticket": "Proof of a completed purchase or payment, or a reservation, order pickup, boarding pass, event ticket or appointment confirmation.",
+      "bill": "A bill, invoice or statement addressed to them that concerns money going out, including subscription renewal notices.",
+      "security": "A sign-in alert, password change, breach notice, account recovery or suspicious-activity warning from a service they use.",
+      "code_2fa": "A one-time login or verification code. Useless once a few minutes pass.",
+      "newsletter_or_digest": "Recurring content they subscribed to, or an automated periodic summary from a tool, such as a weekly roundup or a daily task digest.",
+      "tool_notification": "A single automated event from software they use, such as a card assignment, a build result, a comment, or a document share.",
+      "marketing": "Promotional, sales or cold outreach mail they did not ask for, including webinar invitations and product announcements."
+    }
+  },
+  "needs_reply": {
+    "type": "noul",
+    "instructions": "A human being is waiting for this recipient to write back, and silence would hold something up."
+  },
+  "phishing": {
+    "type": "noul",
+    "instructions": "This message looks fraudulent: the sender name does not match the brand or person it claims to be, or it pressures the reader to click a link to fix a payment, refund or account problem."
+  },
+  "settled_money": {
+    "type": "noul",
+    "instructions": "Any money in this message is already handled: it is a paid receipt, or it is charged automatically, so no manual payment is needed."
+  },
+  "urgency": {
+    "type": "score",
+    "instructions": "How soon does this message need the recipient's attention?",
+    "criteria": [
+      "Nothing is expected of the recipient, or it can wait indefinitely",
+      "Should be handled in the next week or so",
+      "A named date or deadline is within a few days",
+      "Money, access or a person is blocked right now"
+    ]
+  }
+}
